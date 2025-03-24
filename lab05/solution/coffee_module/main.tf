@@ -10,7 +10,7 @@ terraform {
 
 resource "hashicups_coffee" "my_custom_coffee" {
   name       = "Terraform Brew"
-  teaser     = "Summer bodies are made in Winter"
+  teaser     = "Summer bodies are made in winter"
   collection = "Fitline"
   price      = 230
   image      = "/terraform.png"
@@ -26,4 +26,8 @@ resource "hashicups_coffee" "my_custom_coffee" {
       unit     = "ml"
     },
   ]
+}
+
+output "price" {
+  value = hashicups_coffee.my_custom_coffee.price
 }

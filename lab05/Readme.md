@@ -1,12 +1,12 @@
 **Aufgabe: Modul um den Parameter „strong“ erweitern**
 
-1. **Öffne die Datei `variables.tf` im Modulverzeichnis**:
+1. **Die Datei `variables.tf` im Modulverzeichnis bearbeiten**:
    - Erstelle eine Datei namens `variables.tf` im Verzeichnis `coffee_module`, falls sie noch nicht existiert.
    - Füge den folgenden Code hinzu, um den Parameter `strong` zu definieren:
 
 ```
 variable "strong" {
-  description = "Soll der Kaffee start sein?"
+  description = "Soll der Kaffee stark sein?"
   type        = bool
   default     = false
 }

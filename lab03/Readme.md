@@ -5,6 +5,25 @@
 2. **Erstelle eine eigene Kaffee-Kreation**:
    - Füge eine neue Resource für deine eigene Kaffee-Kreation hinzu. Du kannst dich dabei aus der Liste der bekannten Zutaten bedienen. Hier ist ein Beispiel, wie du deine eigene Kreation definieren könntest:
 
+    Mögliche Werte für Ingredients sind:
+      - 'Espresso'
+      - 'Oatmilk'
+      - 'Hot Water'
+      - 'Pumpkin Spice'
+      - 'Steamed Milk'
+      - 'Coffee'
+
+   Mögliche Werte für Images sind:
+      - boundary.png
+      - consul.png
+      - hashicorp.png
+      - nomad.png
+      - packer.png
+      - terraform.png
+      - vagrant.png
+      - vault.png
+      - waypoint.png
+
 ```
 resource "hashicups_coffee" "my_custom_coffee" {
   name       = "<Dein Name>"
@@ -13,7 +32,7 @@ resource "hashicups_coffee" "my_custom_coffee" {
   price      = <Dein Preis>
   image      = "/terraform.png"
   ingredients = [
-    # Liste Deiner Zutagen
+    # Liste Deiner Zutaten
   ]
 }
 ```

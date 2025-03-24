@@ -7,7 +7,7 @@
    - Ändere die vorhandene `hashicups_coffee` Resource indem Du die Liste der `ingredients` änderst.
     Mögliche Werte sind:
       - 'Espresso'
-      - 'Semi Skimmed Milk'
+      - 'Oatmilk'
       - 'Hot Water'
       - 'Pumpkin Spice'
       - 'Steamed Milk'
