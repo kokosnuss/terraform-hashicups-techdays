@@ -27,7 +27,3 @@ resource "hashicups_coffee" "my_custom_coffee" {
     },
   ]
 }
-
-output "price" {
-  value = hashicups_coffee.my_custom_coffee.price
-}
