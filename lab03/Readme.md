@@ -7,7 +7,7 @@
 
     Mögliche Werte für Ingredients sind:
       - 'Espresso'
-      - 'Oatmilk'
+      - 'Oat Milk'
       - 'Hot Water'
       - 'Pumpkin Spice'
       - 'Steamed Milk'
@@ -42,3 +42,6 @@ resource "hashicups_coffee" "my_custom_coffee" {
 
 4. **Wende die Konfiguration an**:
    - Führe den Befehl `terraform apply` aus, um deine eigene Kaffee-Kreation zu erstellen.
+
+5. **Räume den Workspace wieder auf**:
+   - Führe dafür folgenden befehl aus: `terraform destroy`

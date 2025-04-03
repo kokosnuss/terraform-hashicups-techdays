@@ -27,11 +27,11 @@ terraform {
 
 ```
 resource "hashicups_coffee" "my_custom_coffee" {
-  name       = "Terraform Brew"
+  name       = "Consul Brew"
   teaser     = "Summer bodies are made in Winter"
   collection = "Fitline"
   price      = 230
-  image      = "/terraform.png"
+  image      = "/consul.png"
   ingredients = [
     {
       name     = "Espresso"
@@ -50,14 +50,27 @@ resource "hashicups_coffee" "my_custom_coffee" {
 
 3. **Verwende das Modul in der Hauptkonfiguration**:
    - Öffne die Datei `main.tf` im Hauptverzeichnis deines Projekts.
-   - Entferne den Code für die Resource `"hashicups_coffee" "edu"` und ersetze ihn mit dem Modul-Aufruf
+   - Ersetze den Inhalt der Datei mit dem folgenden Code:
 
 ```
+terraform {
+  required_providers {
+    hashicups = {
+      source = "kokosnuss/hashicups"
+    }
+  }
+  required_version = ">= 1.1.0"
+}
+
+provider "hashicups" {
+  host = "http://localhost:9090"
+}
+
 module "my_coffee" {
   source  = "./coffee_module"
 }
 ```
-4. **Re-Initialisiere das Terraform-Projekt**:
+4. **[WICHTIG] Re-Initialisiere das Terraform-Projekt**:
    - Führe den Befehl `terraform init` aus, um das Projekt zu initialisieren.
 
 5. **Überprüfe den Plan**:
@@ -65,3 +78,6 @@ module "my_coffee" {
 
 6. **Wende die Konfiguration an**:
    - Führe den Befehl `terraform apply` aus, um die Kaffee-Kreation als Modul anzuwenden.
+
+7. **Räume den Workspace wieder auf**:
+   - Führe dafür folgenden befehl aus: `terraform destroy`

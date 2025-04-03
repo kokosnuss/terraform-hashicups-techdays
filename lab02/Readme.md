@@ -7,7 +7,7 @@
    - Ändere die vorhandene `hashicups_coffee` Resource indem Du die Liste der `ingredients` änderst.
     Mögliche Werte sind:
       - 'Espresso'
-      - 'Oatmilk'
+      - 'Oat Milk'
       - 'Hot Water'
       - 'Pumpkin Spice'
       - 'Steamed Milk'
@@ -27,7 +27,7 @@ resource "hashicups_coffee" "edu" {
       unit     = "ml"
     },
     {
-      name     = "Steamed Milk"
+      name     = "Oat Milk"
       quantity = 30
       unit     = "ml"
     },
@@ -44,3 +44,6 @@ resource "hashicups_coffee" "edu" {
 
 5. **Überprüfe die Anwendung**:
    - Stelle sicher, dass die Resource erfolgreich modifiziert wurde und überprüfe die Ausgabe.
+
+6. **Räume den Workspace wieder auf**:
+   - Führe dafür folgenden befehl aus: `terraform destroy`

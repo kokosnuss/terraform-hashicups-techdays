@@ -1,8 +1,8 @@
 **Aufgabe: Modul um den Parameter „strong“ erweitern**
 
-1. **Die Datei `variables.tf` im Modulverzeichnis bearbeiten**:
-   - Erstelle eine Datei namens `variables.tf` im Verzeichnis `coffee_module`, falls sie noch nicht existiert.
-   - Füge den folgenden Code hinzu, um den Parameter `strong` zu definieren:
+1. **Die Datei `variables.tf` im Modulverzeichnis erstellen**:
+   - Erstelle eine Datei namens `variables.tf` im Verzeichnis `coffee_module`
+   - Füge den folgenden Code hinzu, um den Input-Parameter `strong` zu definieren:
 
 ```
 variable "strong" {
@@ -18,11 +18,11 @@ variable "strong" {
 
 ```
 resource "hashicups_coffee" "my_custom_coffee" {
-  name       = "Terraform Brew"
+  name       = "Consul Brew"
   teaser     = "Summer bodies are made in Winter"
   collection = "Fitline"
   price      = 230
-  image      = "/terraform.png"
+  image      = "/consul.png"
   ingredients = [
     {
       name     = var.strong ? "Espresso" : "Coffee"
@@ -38,25 +38,43 @@ resource "hashicups_coffee" "my_custom_coffee" {
 }
 ```
 
-3. **Verwende das Modul in der Hauptkonfiguration**:
-   - Öffne die Datei `main.tf` im Hauptverzeichnis deines Projekts.
-   - Füge den Parameter `strong` hinzu, wenn du das Modul aufrufst:
+3. **Definiere eine Output-Variable des Moduls**:
+   - Erstelle eine Datei namens `outputs.tf` im Verzeichnis `coffee_module`
+   - Definiere einen Output und verweise dabei auf den Preis der Kaffeespezialität:
 
-```hcl
+```
+output "price" {
+  value = hashicups_coffee.my_custom_coffee.price
+}
+```
+
+
+4. **Verwende das Modul in der Hauptkonfiguration**:
+   - Öffne die Datei `main.tf` im Hauptverzeichnis deines Projekts.
+   
+
+```
 module "my_coffee" {
   source  = "./coffee_module"
   strong = false
 }
+
+output "price" {
+   value = module.my_coffee.price
+}
 ```
 
-4. **Re-Initialisiere das Terraform-Projekt**:
+5. **Re-Initialisiere das Terraform-Projekt**:
    - Führe den Befehl `terraform init` aus, um das Projekt zu initialisieren.
 
-5. **Überprüfe den Plan**:
+6. **Überprüfe den Plan**:
    - Führe den Befehl `terraform plan` aus, um sicherzustellen, dass das Modul korrekt definiert und verwendet wird.
 
-6. **Wende die Konfiguration an**:
+7. **Wende die Konfiguration an**:
    - Führe den Befehl `terraform apply` aus, um die Änderungen anzuwenden.
 
-7. **Überprüfe die Anwendung**:
+8. **Überprüfe die Anwendung**:
    - Stelle sicher, dass die Resource erfolgreich erstellt wurde und überprüfe die Ausgabe.
+
+9. **Räume den Workspace wieder auf**:
+   - Führe dafür folgenden befehl aus: `terraform destroy`
