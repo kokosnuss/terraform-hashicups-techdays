@@ -1,10 +1,13 @@
 **Aufgabe: Kaffee Resource erstellen und anwenden**
 
-1. **Erstellt eine neue Terraform-Konfigurationsdatei**:
-   - Erstellt eine Datei namens `main.tf`.
+0. **Stelle sicher, dass du dich im richtigen Verzeichnis befindest**:
+   - `cd main`
 
-2. **Definiert den Terraform-Block**:
-   - Fügt folgenden Code in die `main.tf` Datei ein:
+1. **Erstelle eine neue Terraform-Konfigurationsdatei**:
+   - Erstelle in diesem Verzeichnis eine Datei namens `main.tf`.
+
+2. **Definiere den Terraform-Block**:
+   - Füge folgenden Code in die `main.tf` Datei ein:
 
 ```hcl
 terraform {
@@ -22,7 +25,7 @@ terraform {
 
 ```
 provider "hashicups" {
-
+    host = "http://localhost:9090"
 }
 ```
 4. **Definiert die Coffee-Resource**:
@@ -49,11 +52,14 @@ resource "hashicups_coffee" "edu" {
 }
 ```
 
-5. **Initialisiert das Terraform-Projekt**:
-   - Führt den Befehl `terraform init` aus, um das Projekt zu initialisieren.
+5. **Initialisiere das Terraform-Projekt**:
+   - Führe den Befehl `terraform init` aus, um das Projekt zu initialisieren.
 
-6. **Überprüft den Plan**:
-   - Führt den Befehl `terraform plan` aus, um den Plan zu überprüfen und sicherzustellen, dass die Konfiguration korrekt ist.
+6. **Überprüfe den Plan**:
+   - Führe den Befehl `terraform plan` aus, um den Plan zu überprüfen und sicherzustellen, dass die Konfiguration korrekt ist.
 
-7. **Wendet die Konfiguration an**:
-   - Führt den Befehl `terraform apply` aus, um die Kaffee Resource zu erstellen.
+7. **Wende die Konfiguration an**:
+   - Führe den Befehl `terraform apply` aus, um die Kaffee Resource zu erstellen.
+
+8. **Räume den Workspace wieder auf**:
+   - Führe dafür folgenden befehl aus: `terraform destroy`

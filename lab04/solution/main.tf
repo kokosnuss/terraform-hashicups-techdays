@@ -1,4 +1,3 @@
-
 terraform {
   required_providers {
     hashicups = {
@@ -9,7 +8,7 @@ terraform {
 }
 
 provider "hashicups" {
-
+  host = "http://localhost:9090"
 }
 
 module "my_coffee" {

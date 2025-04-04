@@ -1,4 +1,3 @@
-
 terraform {
   required_providers {
     hashicups = {
@@ -9,7 +8,7 @@ terraform {
 }
 
 provider "hashicups" {
-
+  host = "http://localhost:9090"
 }
 
 resource "hashicups_coffee" "edu" {
@@ -35,7 +34,7 @@ resource "hashicups_coffee" "my_custom_coffee" {
   teaser     = "Summer bodies are made in Winter"
   collection = "Fitline"
   price      = 230
-  image      = "/terraform.png"
+  image      = "/consul.png"
   ingredients = [
     {
       name     = "Espresso"

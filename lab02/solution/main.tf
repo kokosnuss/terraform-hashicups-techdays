@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "hashicups" {
-
+  host = "http://localhost:9090"
 }
 
 resource "hashicups_coffee" "edu" {
@@ -22,7 +22,7 @@ resource "hashicups_coffee" "edu" {
       unit     = "ml"
     },
     {
-      name     = "Steamed Milk"
+      name     = "Oat Milk"
       quantity = 30
       unit     = "ml"
     },

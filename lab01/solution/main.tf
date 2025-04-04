@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "hashicups" {
-
+  host = "http://localhost:9090"
 }
 
 resource "hashicups_coffee" "edu" {
