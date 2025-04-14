@@ -23,6 +23,7 @@
       - vagrant.png
       - vault.png
       - waypoint.png
+      - techdays.png
 
 ```
 resource "hashicups_coffee" "my_custom_coffee" {

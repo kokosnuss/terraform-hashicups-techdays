@@ -34,7 +34,7 @@ resource "hashicups_coffee" "my_custom_coffee" {
   teaser     = "Summer bodies are made in Winter"
   collection = "Fitline"
   price      = 230
-  image      = "/consul.png"
+  image      = "/techdays.png"
   ingredients = [
     {
       name     = "Espresso"
