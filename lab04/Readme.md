@@ -20,7 +20,7 @@ terraform {
 }
 ```
 
-4. **Füge Deine Kaffee-Creation**
+4. **Füge Deine Kaffee-Kreation**
    - Füge Deinen `hashicups_coffee` Code aus lab03 in die `coffee_module/main.tf` Datei ein, um die Kaffee-Kreation als Modul zu definieren:
      z.B:
 

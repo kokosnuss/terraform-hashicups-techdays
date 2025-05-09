@@ -1,7 +1,7 @@
 ### Aufgabe: Fortgeschrittene Erweiterung des Terraform-Moduls
 
 #### Ziel:
-Erweitere das erstelle Terraform-Modul um einen neuen Parameter, der die Bechergröße des Kaffees festlegt. Der Preis des Kaffees soll je nach Bechergröße variieren und im Output angezeigt werden.
+Erweitere das erstellte Terraform-Modul um einen neuen Parameter, der die Bechergröße des Kaffees festlegt. Der Preis des Kaffees soll je nach Bechergröße variieren und im Output angezeigt werden.
 
 #### Schritte:
 
